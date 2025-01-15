@@ -14,7 +14,7 @@ UPDATED_HYDRA_DEFAULTS = {
         "disable_existing_loggers": True,
     },
     "run": {
-        "dir": "exp/outputs/${now:%Y-%m-%d}/${now:%H-%M-%S.%f}_${uuid:16}" # no collisions
+        "dir": "exp/outputs/${now:%Y-%m-%d}/${now:%H-%M-%S.%f}"
     },
 }
 
