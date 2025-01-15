@@ -167,7 +167,7 @@ helpful_base_test.jsonl
 # https://git-scm.com/docs/gitignore#_pattern_format
 data/*
 data/raw/*
-data/processed/*
+# data/processed/*
 !data/meta_data
 !data/processed
 !data/prompts
@@ -187,7 +187,7 @@ annotation.json
 leaderboard.csv
 
 .DS_Store
-outputs/
+# outputs/
 multirun/
 wandb/
 results_evaluators

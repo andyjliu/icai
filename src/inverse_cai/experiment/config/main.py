@@ -11,13 +11,12 @@ from inverse_cai.experiment.config.prompts import PromptConfig
 
 UPDATED_HYDRA_DEFAULTS = {
     "job_logging": {
-        # this prevents non-loguru loggers from showing up
-        # (e.g. OpenAI API logs, which are very verbose and not needed for debugging)
         "disable_existing_loggers": True,
     },
-    "run": {"dir": "exp/outputs/${now:%Y-%m-%d}_${now:%H-%M-%S}"},
+    "run": {
+        "dir": "exp/outputs/${now:%Y-%m-%d}/${now:%H-%M-%S.%f}_${uuid:16}" # no collisions
+    },
 }
-
 
 @dataclass
 class AnnotatorConfig:
